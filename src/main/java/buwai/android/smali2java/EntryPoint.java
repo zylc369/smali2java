@@ -140,7 +140,7 @@ public class EntryPoint {
 				if (files[i].isDirectory()) { // 判断是文件还是文件夹
 					getFileList(files[i], extensions); // 获取文件绝对路径
 				} else if (fileName.endsWith(extensions)) { // 判断文件名是否以.avi结尾
-					String strFileName = files[i].getAbsolutePath();
+					//String strFileName = files[i].getAbsolutePath();
 					//System.out.println("---" + strFileName);
 					filelist.add(files[i]);
 				} else {
