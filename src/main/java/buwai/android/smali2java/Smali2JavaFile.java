@@ -8,7 +8,33 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import buwai.android.smaliinstruction.*;
+import buwai.android.smaliinstruction.SmaliInstruction;
+import buwai.android.smaliinstruction.SmaliInstruction01;
+import buwai.android.smaliinstruction.SmaliInstruction02;
+import buwai.android.smaliinstruction.SmaliInstruction03;
+import buwai.android.smaliinstruction.SmaliInstruction04;
+import buwai.android.smaliinstruction.SmaliInstruction05;
+import buwai.android.smaliinstruction.SmaliInstruction06;
+import buwai.android.smaliinstruction.SmaliInstruction07;
+import buwai.android.smaliinstruction.SmaliInstruction08;
+import buwai.android.smaliinstruction.SmaliInstruction09;
+import buwai.android.smaliinstruction.SmaliInstruction10;
+import buwai.android.smaliinstruction.SmaliInstruction11;
+import buwai.android.smaliinstruction.SmaliInstruction12;
+import buwai.android.smaliinstruction.SmaliInstruction13;
+import buwai.android.smaliinstruction.SmaliInstruction14;
+import buwai.android.smaliinstruction.SmaliInstruction15;
+import buwai.android.smaliinstruction.SmaliInstruction16;
+import buwai.android.smaliinstruction.SmaliInstruction17;
+import buwai.android.smaliinstruction.SmaliInstruction18;
+import buwai.android.smaliinstruction.SmaliInstruction19;
+import buwai.android.smaliinstruction.SmaliInstruction20;
+import buwai.android.smaliinstruction.SmaliInstruction21;
+import buwai.android.smaliinstruction.SmaliInstruction22;
+import buwai.android.smaliinstruction.SmaliInstruction23;
+import buwai.android.smaliinstruction.SmaliInstruction24;
+import buwai.android.smaliinstruction.SmaliInstruction25;
+import buwai.android.smaliinstruction.SmaliInstruction26;
 
 public class Smali2JavaFile {
 
@@ -27,6 +53,7 @@ public class Smali2JavaFile {
 			writer = new BufferedWriter(new FileWriter(out));
 
 			String line;
+			String keep = null;
 			while ((line = reader.readLine()) != null) {
 				writer.write(smali2Java(line));
 				writer.newLine();
@@ -232,6 +259,11 @@ public class Smali2JavaFile {
 			case 0x70:
 			case 0x71:
 			case 0x72:
+			case 0x74:
+			case 0x75:
+			case 0x76:
+			case 0x77:
+			case 0x78:
 				newLine = SmaliInstruction26.toJava(id, trimLine);
 				break;
 			default:
