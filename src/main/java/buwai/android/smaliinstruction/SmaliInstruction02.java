@@ -27,7 +27,7 @@ public class SmaliInstruction02 {
 		case 0xf:
 			return "return " + vA + ";";
 		case 0x10:
-			return "return " + vA + ",v(" + vA.substring(1) + "+1);";
+			return "return " + vA + "," + vA.substring(0, 1)  + "(" + vA.substring(1) + "+1);";
 		case 0x11:
 			return "return (Object)" + vA + ";";
 		default:

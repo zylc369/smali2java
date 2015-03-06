@@ -34,9 +34,9 @@ public class SmaliInstruction26 {
 		
 		beginIndex = endIndex + 1;
 		endIndex = smaliInst.lastIndexOf(')');
-		if ("invoke-direct {v2, v5, v6, v7, v8}, Ldalvik/system/DexClassLoader;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)V".equals(smaliInst)) {
-			System.out.println("");
-		}
+//		if ("invoke-direct {v2, v5, v6, v7, v8}, Ldalvik/system/DexClassLoader;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/ClassLoader;)V".equals(smaliInst)) {
+//			System.out.println("");
+//		}
 		List<String> types = Utils.getTypeList(smaliInst.substring(beginIndex, endIndex));
 		
 		String returnType = Utils.getJavaType(smaliInst.substring(endIndex + 1));
@@ -65,9 +65,15 @@ public class SmaliInstruction26 {
 		if (0 == types.size()) {
 			sb.append("()");
 		} else {
+			//System.out.println(smaliInst);
 			sb.append("( ");
 			for (int i = 1, j = 0; i < regsLen; i++, j++) {
-				sb.append(String.format("(%s)%s", types.get(j), regs.get(i)));
+				if (types.get(j).equals("double") || types.get(j).equals("long")) {
+					sb.append(String.format("(%s)(%s, %s)", types.get(j), regs.get(i), regs.get(i + 1)));
+					i++;
+				} else {
+					sb.append(String.format("(%s)%s", types.get(j), regs.get(i)));
+				}
 				if ((i + 1) != regsLen) {
 					sb.append(", ");
 				}

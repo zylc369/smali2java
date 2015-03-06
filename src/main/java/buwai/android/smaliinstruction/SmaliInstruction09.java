@@ -16,7 +16,7 @@ public class SmaliInstruction09 {
 		endIndex = smaliInst.indexOf(',', beginIndex + 1);
 		String vA = smaliInst.substring(beginIndex, endIndex).trim();
 
-		String vB = smaliInst.substring(endIndex + 1, smaliInst.indexOf(',', endIndex + 1)).trim();
+		String vB = smaliInst.substring(endIndex + 1).trim();
 		
 		return vA + " = " + "array_size(" + vB + ");";
 	}
