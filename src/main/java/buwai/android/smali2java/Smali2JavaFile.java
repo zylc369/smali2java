@@ -53,7 +53,7 @@ public class Smali2JavaFile {
 			writer = new BufferedWriter(new FileWriter(out));
 
 			String line;
-			String keep = null;
+			//List<String> lines = new ArrayList<String>();
 			while ((line = reader.readLine()) != null) {
 				writer.write(smali2Java(line));
 				writer.newLine();
