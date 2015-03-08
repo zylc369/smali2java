@@ -149,7 +149,113 @@ public enum SmaliInstruction {
 	INVOKE_STATIC_RANGE (0x77, "invoke-static/range"), 
 	INVOKE_INTERFACE_RANGE (0x78, "invoke-interface/range"), 
 	
+	NEG_INT (0x7b, "neg-int"), 
+	NOT_INT (0x7c, "not-int"), 
+	NEG_LONG (0x7d, "neg-long"), 
+	NOT_LONG (0x7e, "not-long"), 
+	NEG_FLOAT (0x7f, "neg-float"), 
+	NEG_DOUBLE (0x80, "neg-double"), 
+	INT_TO_LONG (0x81, "int-to-long"), 
+	INT_TO_FLOAT (0x82, "int-to-float"), 
+	INT_TO_DOUBLE (0x83, "int-to-double"), 
+	LONG_TO_INT (0x84, "long-to-int"), 
+	LONG_TO_FLOAT (0x85, "long-to-float"), 
+	LONG_TO_DOUBLE (0x86, "long-to-double"), 
+	FLOAT_TO_INT (0x87, "float-to-int"), 
+	FLOAT_TO_LONG (0x88, "float-to-long"), 
+	FLOAT_TO_DOUBLE (0x89, "float-to-double"), 
+	DOUBLE_TO_INT (0x8a, "double-to-int"), 
+	DOUBLE_TO_LONG (0x8b, "double-to-long"), 
+	DOUBLE_TO_FLOAT (0x8c, "double-to-float"), 
+	INT_TO_BYTE (0x8d, "int-to-byte"), 
+	INT_TO_CHAR (0x8e, "int-to-char"), 
+	INT_TO_SHORT (0x8f, "int-to-short"), 
 	
+	ADD_INT (0x90, "add-int"), 
+	SUB_INT (0x91, "sub-int"), 
+	MUL_INT (0x92, "mul-int"), 
+	DEV_INT (0x93, "div-int"), 
+	REM_INT (0x94, "rem-int"), 
+	AND_INT (0x95, "and-int"), 
+	OR_INT (0x96, "or-int"), 
+	XOR_INT (0x97, "xor-int"), 
+	SHL_INT (0x98, "shl-int"), 
+	SHR_INT (0x99, "shr-int"), 
+	USHR_INT (0x9a, "ushr-int"), 
+	ADD_LONG (0x9b, "add-long"), 
+	SUB_LONG (0x9c, "sub-long"), 
+	MUL_LONG (0x9d, "mul-long"), 
+	DIV_LONG (0x9e, "div-long"), 
+	REM_LONG (0x9f, "rem-long"), 
+	AND_LONG (0xa0, "and-long"), 
+	OR_LONG (0xa1, "or-long"), 
+	XOR_LONG (0xa2, "xor-long"), 
+	SHL_LONG (0xa3, "shl-long"), 
+	SHR_LONG (0xa4, "shr-long"), 
+	USHR_LONG (0xa5, "ushr-long"), 
+	ADD_FLOAT (0xa6, "add-float"), 
+	SUB_FLOAT (0xa7, "sub-float"), 
+	MUL_FLOAT (0xa8, "mul-float"), 
+	DIV_FLOAT (0xa9, "div-float"), 
+	REM_FLOAT (0xaa, "rem-float"), 
+	ADD_DOUBLE (0xab, "add-double"), 
+	SUB_DOUBLE (0xac, "sub-double"), 
+	MUL_DOUBLE (0xad, "mul-double"), 
+	DIV_DOUBLE (0xae, "div-double"), 
+	REM_DOUBLE (0xaf, "rem-double"), 
+	
+	ADD_INT_2ADDR (0xb0, "add-int/2addr"), 
+	SUB_INT_2ADDR (0xb1, "sub-int/2addr"), 
+	MUL_INT_2ADDR (0xb2, "mul-int/2addr"), 
+	DIV_INT_2ADDR (0xb3, "div-int/2addr"), 
+	REM_INT_2ADDR (0xb4, "rem-int/2addr"), 
+	AND_INT_2ADDR (0xb5, "and-int/2addr"), 
+	OR_INT_2ADDR (0xb6, "or-int/2addr"), 
+	XOR_INT_2ADDR (0xb7, "xor-int/2addr"), 
+	SHL_INT_2ADDR (0xb8, "shl-int/2addr"), 
+	SHR_INT_2ADDR (0xb9, "shr-int/2addr"), 
+	USHR_INT_2ADDR (0xba, "ushr-int/2addr"), 
+	ADD_LONG_2ADDR (0xbb, "add-long/2addr"), 
+	SUB_LONG_2ADDR (0xbc, "sub-long/2addr"), 
+	MUL_LONG_2ADDR (0xbd, "mul-long/2addr"), 
+	DIV_LONG_2ADDR (0xbe, "div-long/2addr"), 
+	REM_LONG_2ADDR (0xbf, "rem-long/2addr"), 
+	AND_LONG_2ADDR (0xc0, "and-long/2addr"), 
+	OR_LONG_2ADDR (0xc1, "or-long/2addr"), 
+	XOR_LONG_2ADDR (0xc2, "xor-long/2addr"), 
+	SHL_LONG_2ADDR (0xc3, "shl-long/2addr"), 
+	SHR_LONG_2ADDR (0xc4, "shr-long/2addr"), 
+	USHR_LONG_2ADDR (0xc5, "ushr-long/2addr"), 
+	ADD_FLOAT_2ADDR (0xc6, "add-float/2addr"), 
+	SUB_FLOAT_2ADDR (0xc7, "sub-float/2addr"), 
+	MUL_FLOAT_2ADDR (0xc8, "mul-float/2addr"), 
+	DIV_FLOAT_2ADDR (0xc9, "div-float/2addr"), 
+	REM_FLOAT_2ADDR (0xca, "rem-float/2addr"), 
+	ADD_DOUBLE_2ADDR (0xcb, "add-double/2addr"), 
+	SUB_DOUBLE_2ADDR (0xcc, "sub-double/2addr"), 
+	MUL_DOUBLE_2ADDR (0xcd, "mul-double/2addr"), 
+	DIV_DOUBLE_2ADDR (0xce, "div-double/2addr"), 
+	REM_DOUBLE_2ADDR (0xcf, "rem-double/2addr"), 
+	
+	ADD_INT_LIT16 (0xd0, "add-int/lit16"), 
+	RSUB_INT (0xd1, "rsub-int"), 
+	MUL_INT_LIT16 (0xd2, "mul-int/lit16"), 
+	DIV_INT_LIT16 (0xd3, "div-int/lit16"), 
+	REM_INT_LIT16 (0xd4, "rem-int/lit16"), 
+	AND_INT_LIT16 (0xd5, "and-int/lit16"), 
+	OR_INT_LIT16 (0xd6, "or-int/lit16"), 
+	XOR_INT_LIT16 (0xd7, "xor-int/lit16"), 
+	ADD_INT_LIT8 (0xd8, "add-int/lit8"), 
+	RSUB_INT_LIT8 (0xd9, "rsub-int/lit8"), 
+	MUL_INT_LIT8 (0xda, "mul-int/lit8"), 
+	DIV_INT_LIT8 (0xdb, "div-int/lit8"), 
+	REM_INT_LIT8 (0xdc, "rem-int/lit8"), 
+	AND_INT_LIT8 (0xdd, "and-int/lit8"), 
+	OR_INT_LIT8 (0xde, "or-int/lit8"), 
+	XOR_INT_LIT8 (0xdf, "xor-int/lit8"), 
+	SHL_INT_LIT8 (0xe0, "shl-int/lit8"), 
+	SHR_INT_LIT8 (0xe1, "shr-int/lit8"), 
+	USHR_INT_LIT8 (0xe2, "ushr-int/lit8"), 
 	;
 
 	public static final Map<String, SmaliInstruction> smaliInstructions;
@@ -299,6 +405,114 @@ public enum SmaliInstruction {
 		smaliInstructions.put(INVOKE_DIRECT_RANGE.feature,INVOKE_DIRECT_RANGE);
 		smaliInstructions.put(INVOKE_STATIC_RANGE.feature,INVOKE_STATIC_RANGE);
 		smaliInstructions.put(INVOKE_INTERFACE_RANGE.feature,INVOKE_INTERFACE_RANGE);
+			
+		smaliInstructions.put(NEG_INT.feature,NEG_INT);
+		smaliInstructions.put(NOT_INT.feature,NOT_INT);
+		smaliInstructions.put(NEG_LONG.feature,NEG_LONG);
+		smaliInstructions.put(NOT_LONG.feature,NOT_LONG);
+		smaliInstructions.put(NEG_FLOAT.feature,NEG_FLOAT);
+		smaliInstructions.put(NEG_DOUBLE.feature,NEG_DOUBLE);
+		smaliInstructions.put(INT_TO_LONG.feature,INT_TO_LONG);
+		smaliInstructions.put(INT_TO_FLOAT.feature,INT_TO_FLOAT);
+		smaliInstructions.put(INT_TO_DOUBLE.feature,INT_TO_DOUBLE);
+		smaliInstructions.put(LONG_TO_INT.feature,LONG_TO_INT);
+		smaliInstructions.put(LONG_TO_FLOAT.feature,LONG_TO_FLOAT);
+		smaliInstructions.put(LONG_TO_DOUBLE.feature,LONG_TO_DOUBLE);
+		smaliInstructions.put(FLOAT_TO_INT.feature,FLOAT_TO_INT);
+		smaliInstructions.put(FLOAT_TO_LONG.feature,FLOAT_TO_LONG);
+		smaliInstructions.put(FLOAT_TO_DOUBLE.feature,FLOAT_TO_DOUBLE);
+		smaliInstructions.put(DOUBLE_TO_INT.feature,DOUBLE_TO_INT);
+		smaliInstructions.put(DOUBLE_TO_LONG.feature,DOUBLE_TO_LONG);
+		smaliInstructions.put(DOUBLE_TO_FLOAT.feature,DOUBLE_TO_FLOAT);
+		smaliInstructions.put(INT_TO_BYTE.feature,INT_TO_BYTE);
+		smaliInstructions.put(INT_TO_CHAR.feature,INT_TO_CHAR);
+		smaliInstructions.put(INT_TO_SHORT.feature,INT_TO_SHORT);
+			
+		smaliInstructions.put(ADD_INT.feature,ADD_INT);
+		smaliInstructions.put(SUB_INT.feature,SUB_INT);
+		smaliInstructions.put(MUL_INT.feature,MUL_INT);
+		smaliInstructions.put(DEV_INT.feature,DEV_INT);
+		smaliInstructions.put(REM_INT.feature,REM_INT);
+		smaliInstructions.put(AND_INT.feature,AND_INT);
+		smaliInstructions.put(OR_INT.feature,OR_INT);
+		smaliInstructions.put(XOR_INT.feature,XOR_INT);
+		smaliInstructions.put(SHL_INT.feature,SHL_INT);
+		smaliInstructions.put(SHR_INT.feature,SHR_INT);
+		smaliInstructions.put(USHR_INT.feature,USHR_INT);
+		smaliInstructions.put(ADD_LONG.feature,ADD_LONG);
+		smaliInstructions.put(SUB_LONG.feature,SUB_LONG);
+		smaliInstructions.put(MUL_LONG.feature,MUL_LONG);
+		smaliInstructions.put(DIV_LONG.feature,DIV_LONG);
+		smaliInstructions.put(REM_LONG.feature,REM_LONG);
+		smaliInstructions.put(AND_LONG.feature,AND_LONG);
+		smaliInstructions.put(OR_LONG.feature,OR_LONG);
+		smaliInstructions.put(XOR_LONG.feature,XOR_LONG);
+		smaliInstructions.put(SHL_LONG.feature,SHL_LONG);
+		smaliInstructions.put(SHR_LONG.feature,SHR_LONG);
+		smaliInstructions.put(USHR_LONG.feature,USHR_LONG);
+		smaliInstructions.put(ADD_FLOAT.feature,ADD_FLOAT);
+		smaliInstructions.put(SUB_FLOAT.feature,SUB_FLOAT);
+		smaliInstructions.put(MUL_FLOAT.feature,MUL_FLOAT);
+		smaliInstructions.put(DIV_FLOAT.feature,DIV_FLOAT);
+		smaliInstructions.put(REM_FLOAT.feature,REM_FLOAT);
+		smaliInstructions.put(ADD_DOUBLE.feature,ADD_DOUBLE);
+		smaliInstructions.put(SUB_DOUBLE.feature,SUB_DOUBLE);
+		smaliInstructions.put(MUL_DOUBLE.feature,MUL_DOUBLE);
+		smaliInstructions.put(DIV_DOUBLE.feature,DIV_DOUBLE);
+		smaliInstructions.put(REM_DOUBLE.feature,REM_DOUBLE);
+			
+		smaliInstructions.put(ADD_INT_2ADDR.feature,ADD_INT_2ADDR);
+		smaliInstructions.put(SUB_INT_2ADDR.feature,SUB_INT_2ADDR);
+		smaliInstructions.put(MUL_INT_2ADDR.feature,MUL_INT_2ADDR);
+		smaliInstructions.put(DIV_INT_2ADDR.feature,DIV_INT_2ADDR);
+		smaliInstructions.put(REM_INT_2ADDR.feature,REM_INT_2ADDR);
+		smaliInstructions.put(AND_INT_2ADDR.feature,AND_INT_2ADDR);
+		smaliInstructions.put(OR_INT_2ADDR.feature,OR_INT_2ADDR);
+		smaliInstructions.put(XOR_INT_2ADDR.feature,XOR_INT_2ADDR);
+		smaliInstructions.put(SHL_INT_2ADDR.feature,SHL_INT_2ADDR);
+		smaliInstructions.put(SHR_INT_2ADDR.feature,SHR_INT_2ADDR);
+		smaliInstructions.put(USHR_INT_2ADDR.feature,USHR_INT_2ADDR);
+		smaliInstructions.put(ADD_LONG_2ADDR.feature,ADD_LONG_2ADDR);
+		smaliInstructions.put(SUB_LONG_2ADDR.feature,SUB_LONG_2ADDR);
+		smaliInstructions.put(MUL_LONG_2ADDR.feature,MUL_LONG_2ADDR);
+		smaliInstructions.put(DIV_LONG_2ADDR.feature,DIV_LONG_2ADDR);
+		smaliInstructions.put(REM_LONG_2ADDR.feature,REM_LONG_2ADDR);
+		smaliInstructions.put(AND_LONG_2ADDR.feature,AND_LONG_2ADDR);
+		smaliInstructions.put(OR_LONG_2ADDR.feature,OR_LONG_2ADDR);
+		smaliInstructions.put(XOR_LONG_2ADDR.feature,XOR_LONG_2ADDR);
+		smaliInstructions.put(SHL_LONG_2ADDR.feature,SHL_LONG_2ADDR);
+		smaliInstructions.put(SHR_LONG_2ADDR.feature,SHR_LONG_2ADDR);
+		smaliInstructions.put(USHR_LONG_2ADDR.feature,USHR_LONG_2ADDR);
+		smaliInstructions.put(ADD_FLOAT_2ADDR.feature,ADD_FLOAT_2ADDR);
+		smaliInstructions.put(SUB_FLOAT_2ADDR.feature,SUB_FLOAT_2ADDR);
+		smaliInstructions.put(MUL_FLOAT_2ADDR.feature,MUL_FLOAT_2ADDR);
+		smaliInstructions.put(DIV_FLOAT_2ADDR.feature,DIV_FLOAT_2ADDR);
+		smaliInstructions.put(REM_FLOAT_2ADDR.feature,REM_FLOAT_2ADDR);
+		smaliInstructions.put(ADD_DOUBLE_2ADDR.feature,ADD_DOUBLE_2ADDR);
+		smaliInstructions.put(SUB_DOUBLE_2ADDR.feature,SUB_DOUBLE_2ADDR);
+		smaliInstructions.put(MUL_DOUBLE_2ADDR.feature,MUL_DOUBLE_2ADDR);
+		smaliInstructions.put(DIV_DOUBLE_2ADDR.feature,DIV_DOUBLE_2ADDR);
+		smaliInstructions.put(REM_DOUBLE_2ADDR.feature,REM_DOUBLE_2ADDR);
+			
+		smaliInstructions.put(ADD_INT_LIT16.feature,ADD_INT_LIT16);
+		smaliInstructions.put(RSUB_INT.feature,RSUB_INT);
+		smaliInstructions.put(MUL_INT_LIT16.feature,MUL_INT_LIT16);
+		smaliInstructions.put(DIV_INT_LIT16.feature,DIV_INT_LIT16);
+		smaliInstructions.put(REM_INT_LIT16.feature,REM_INT_LIT16);
+		smaliInstructions.put(AND_INT_LIT16.feature,AND_INT_LIT16);
+		smaliInstructions.put(OR_INT_LIT16.feature,OR_INT_LIT16);
+		smaliInstructions.put(XOR_INT_LIT16.feature,XOR_INT_LIT16);
+		smaliInstructions.put(ADD_INT_LIT8.feature,ADD_INT_LIT8);
+		smaliInstructions.put(RSUB_INT_LIT8.feature,RSUB_INT_LIT8);
+		smaliInstructions.put(MUL_INT_LIT8.feature,MUL_INT_LIT8);
+		smaliInstructions.put(DIV_INT_LIT8.feature,DIV_INT_LIT8);
+		smaliInstructions.put(REM_INT_LIT8.feature,REM_INT_LIT8);
+		smaliInstructions.put(AND_INT_LIT8.feature,AND_INT_LIT8);
+		smaliInstructions.put(OR_INT_LIT8.feature,OR_INT_LIT8);
+		smaliInstructions.put(XOR_INT_LIT8.feature,XOR_INT_LIT8);
+		smaliInstructions.put(SHL_INT_LIT8.feature,SHL_INT_LIT8);
+		smaliInstructions.put(SHR_INT_LIT8.feature,SHR_INT_LIT8);
+		smaliInstructions.put(USHR_INT_LIT8.feature,USHR_INT_LIT8);
 	}
 	
 	public int id;

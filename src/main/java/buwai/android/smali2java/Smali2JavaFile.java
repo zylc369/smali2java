@@ -35,6 +35,11 @@ import buwai.android.smaliinstruction.SmaliInstruction23;
 import buwai.android.smaliinstruction.SmaliInstruction24;
 import buwai.android.smaliinstruction.SmaliInstruction25;
 import buwai.android.smaliinstruction.SmaliInstruction26;
+import buwai.android.smaliinstruction.SmaliInstruction27;
+import buwai.android.smaliinstruction.SmaliInstruction28;
+import buwai.android.smaliinstruction.SmaliInstruction29;
+import buwai.android.smaliinstruction.SmaliInstruction30;
+import buwai.android.smaliinstruction.SmaliInstruction31;
 
 public class Smali2JavaFile {
 
@@ -265,6 +270,121 @@ public class Smali2JavaFile {
 			case 0x77:
 			case 0x78:
 				newLine = SmaliInstruction26.toJava(id, trimLine);
+				break;
+			case 0x7b:
+			case 0x7c:
+			case 0x7d:
+			case 0x7e:
+			case 0x7f:
+			case 0x80:
+				newLine = SmaliInstruction27.toJava(id, trimLine);
+				break;
+			case 0x81:
+			case 0x82:
+			case 0x83:
+			case 0x84:
+			case 0x85:
+			case 0x86:
+			case 0x87:
+			case 0x88:
+			case 0x89:
+			case 0x8a:
+			case 0x8b:
+			case 0x8c:
+			case 0x8d:
+			case 0x8e:
+			case 0x8f:
+				newLine = SmaliInstruction28.toJava(id, trimLine);
+				break;
+			case 0x90:
+			case 0x91:
+			case 0x92:
+			case 0x93:
+			case 0x94:
+			case 0x95:
+			case 0x96:
+			case 0x97:
+			case 0x98:
+			case 0x99:
+			case 0x9a:
+			case 0x9b:
+			case 0x9c:
+			case 0x9d:
+			case 0x9e:
+			case 0x9f:
+			case 0xa0:
+			case 0xa1:
+			case 0xa2:
+			case 0xa3:
+			case 0xa4:
+			case 0xa5:
+			case 0xa6:
+			case 0xa7:
+			case 0xa8:
+			case 0xa9:
+			case 0xaa:
+			case 0xab:
+			case 0xac:
+			case 0xad:
+			case 0xae:
+			case 0xaf:
+				newLine = SmaliInstruction29.toJava(id, trimLine);
+				break;
+			case 0xb0:
+			case 0xb1:
+			case 0xb2:
+			case 0xb3:
+			case 0xb4:
+			case 0xb5:
+			case 0xb6:
+			case 0xb7:
+			case 0xb8:
+			case 0xb9:
+			case 0xba:
+			case 0xbb:
+			case 0xbc:
+			case 0xbd:
+			case 0xbe:
+			case 0xbf:
+			case 0xc0:
+			case 0xc1:
+			case 0xc2:
+			case 0xc3:
+			case 0xc4:
+			case 0xc5:
+			case 0xc6:
+			case 0xc7:
+			case 0xc8:
+			case 0xc9:
+			case 0xca:
+			case 0xcb:
+			case 0xcc:
+			case 0xcd:
+			case 0xce:
+			case 0xcf:
+				newLine = SmaliInstruction30.toJava(id, trimLine);
+				break;
+			case 0xd0:
+			case 0xd1:
+			case 0xd2:
+			case 0xd3:
+			case 0xd4:
+			case 0xd5:
+			case 0xd6:
+			case 0xd7:
+
+			case 0xd8:
+			case 0xd9:
+			case 0xda:
+			case 0xdb:
+			case 0xdc:
+			case 0xdd:
+			case 0xde:
+			case 0xdf:
+			case 0xe0:
+			case 0xe1:
+			case 0xe2:
+				newLine = SmaliInstruction31.toJava(id, trimLine);
 				break;
 			default:
 				return line;
