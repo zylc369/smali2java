@@ -42,7 +42,7 @@ public class SmaliInstruction25 {
 		case 0x6b:
 		case 0x6c:
 		case 0x6d:
-			return className + "->" + fieldName + " = (" + fieldType + ")" + vA + ";";
+			return String.format("%s->%s = (%s) %s;", className, fieldName, fieldType, vA);
 		default:
 			return null;
 		}

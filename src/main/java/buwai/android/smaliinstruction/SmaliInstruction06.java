@@ -3,7 +3,7 @@ package buwai.android.smaliinstruction;
 /**
  * 
 
-1d. monitor-enter
+1e. monitor-exit
 
  * @author buwai
  *

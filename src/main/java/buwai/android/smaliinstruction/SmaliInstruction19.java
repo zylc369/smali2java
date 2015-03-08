@@ -26,17 +26,17 @@ public class SmaliInstruction19 {
 		
 		switch (id) {
 		case 0x38:
-			return "if(" + vA + " == 0) then " + target;
+			return String.format("if (%s == 0) then %s", vA, target);
 		case 0x39:
-			return "if(" + vA + " != 0) then " + target;
+			return String.format("if (%s != 0) then %s", vA, target);
 		case 0x3a:
-			return "if(" + vA + " < 0) then " + target;
+			return String.format("if (%s < 0) then %s", vA, target);
 		case 0x3b:
-			return "if(" + vA + " >= 0) then " + target;
+			return String.format("if (%s >= 0) then %s", vA, target);
 		case 0x3c:
-			return "if(" + vA + " > 0) then " + target;
+			return String.format("if (%s > 0) then %s", vA, target);
 		case 0x3d:
-			return "if(" + vA + " <= 0) then " + target;
+			return String.format("if (%s <= 0) then %s", vA, target);
 		default:
 			return null;
 		}

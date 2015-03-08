@@ -22,7 +22,7 @@ public class SmaliInstruction07 {
 
 		// endIndex + 1表示跳过逗号。
 		String className = Utils.getJavaType(smaliInst.substring(endIndex + 1).trim());
-		return "(" + className + ")" + vA + ";";
+		return String.format("(%s) %s;", className, vA);
 	}
 	
 }

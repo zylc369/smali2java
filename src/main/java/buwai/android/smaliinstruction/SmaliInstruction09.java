@@ -18,7 +18,7 @@ public class SmaliInstruction09 {
 
 		String vB = smaliInst.substring(endIndex + 1).trim();
 		
-		return vA + " = " + "array_size(" + vB + ");";
+		return String.format("%s = array_size(%s);", vA, vB);
 	}
 	
 }

@@ -264,6 +264,7 @@ public class Smali2JavaFile {
 			case 0x70:
 			case 0x71:
 			case 0x72:
+			
 			case 0x74:
 			case 0x75:
 			case 0x76:

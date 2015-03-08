@@ -18,7 +18,7 @@ public class SmaliInstruction10 {
 
 		String className = Utils.getJavaType(smaliInst.substring(smaliInst.lastIndexOf(',') + 1).trim());
 		
-		return vA + " = new " + className + ";";
+		return String.format("%s = new %s;", vA, className);
 	}
 	
 }

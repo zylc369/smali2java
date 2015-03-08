@@ -46,7 +46,7 @@ public class SmaliInstruction23 {
 		case 0x5d:
 		case 0x5e:
 		case 0x5f:
-			return fieldType + " ((" + instanceName + ")" + vB + ")->" + fieldName + " = " + vA + ";";
+			return String.format("%s ((%s)%s)->%s = %s;", fieldType, instanceName, vB, fieldName, vA);
 		default:
 			return null;
 		}

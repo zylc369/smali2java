@@ -44,9 +44,9 @@ public class SmaliInstruction28 {
 		case 0x85:
 			return String.format("float %s = long:%s,%s+1;", vA, vB, vB);
 		case 0x86:
-			return String.format("double %s,%s+1 = long:%s,%s+1", vA, vA, vB, vB);
+			return String.format("double %s,%s+1 = long:%s,%s+1;", vA, vA, vB, vB);
 		case 0x87:
-			return String.format("int %s = float:%s,%s+1", vA, vB, vB);
+			return String.format("int %s = float:%s;", vA, vB);
 		case 0x88:
 			return String.format("long %s,%s+1 = float:%s", vA, vA, vB);
 		case 0x89:

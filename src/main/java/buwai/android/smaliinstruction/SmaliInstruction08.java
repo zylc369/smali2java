@@ -21,7 +21,7 @@ public class SmaliInstruction08 {
 		String vB = smaliInst.substring(endIndex + 1, smaliInst.indexOf(',', endIndex + 1)).trim();
 		
 		String className = Utils.getJavaType(smaliInst.substring(smaliInst.lastIndexOf(',') + 1).trim());
-		return vA + " = " + vB + " instanceof " + className + ";";
+		return String.format("%s = %s instanceof %s;", vA, vB, className);
 	}
 
 }

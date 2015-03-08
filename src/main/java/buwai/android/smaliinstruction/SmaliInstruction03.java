@@ -29,19 +29,18 @@ public class SmaliInstruction03 {
 		// endIndex + 1表示跳过逗号。
 		String constValue = smaliInst.substring(endIndex + 1).trim();
 		switch (id) {
-		case 0x12:
-		case 0x13:
-		case 0x14:
+		case 0x12:	// const/4
+		case 0x13:	// const/16
+		case 0x14:	// const
+		case 0x1a:	// const-string
+		case 0x1b:	// const-string/jumbo
 			return vA + " = " + constValue + ";";
-		case 0x15:
-		case 0x16:
-		case 0x17:
-		case 0x18:
-		case 0x19:
+		case 0x15:	// const/high16
+		case 0x16:	// const-wide/16
+		case 0x17:	// const-wide/32
+		case 0x18:	// const-wide
+		case 0x19:	// const-wide/high16
 			return smaliInst;
-		case 0x1a:
-		case 0x1b:
-			return vA + " = " + constValue + ";";
 		default:
 			return null;
 		}

@@ -17,7 +17,8 @@ public class SmaliInstruction11 {
 		String vA = smaliInst.substring(beginIndex, endIndex).trim();
 
 		// endIndex + 1表示跳过逗号。
-		String vB = smaliInst.substring(endIndex + 1, smaliInst.indexOf(',', endIndex + 1)).trim();
+		beginIndex = endIndex + 1;
+		String vB = smaliInst.substring(beginIndex, smaliInst.indexOf(',', beginIndex)).trim();
 		
 		String className = smaliInst.substring(smaliInst.lastIndexOf(',') + 1).trim();
 		if ('[' == className.charAt(0)) {
@@ -25,7 +26,7 @@ public class SmaliInstruction11 {
 		} else {
 			className = className.substring(1, className.lastIndexOf(';')).replace('/', '.');
 		}
-		return vA + " = new " + className + "[" + vB + "]" + ";";
+		return String.format("%s = new %s[%s];", vA, className, vB);
 	}
 	
 }

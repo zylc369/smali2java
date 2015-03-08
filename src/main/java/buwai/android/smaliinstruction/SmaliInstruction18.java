@@ -29,17 +29,17 @@ public class SmaliInstruction18 {
 		String target = smaliInst.substring(endIndex + 1).trim();
 		switch (id) {
 		case 0x32:
-			return "if(" + vA + " == " + vB + ") then " + target;
+			return String.format("if (%s == %s) then %s", vA, vB, target);
 		case 0x33:
-			return "if(" + vA + " != " + vB + ") then " + target;
+			return String.format("if (%s != %s) then %s", vA, vB, target);
 		case 0x34:
-			return "if(" + vA + " < " + vB + ") then " + target;
+			return String.format("if (%s < %s) then %s", vA, vB, target);
 		case 0x35:
-			return "if(" + vA + " >= " + vB + ") then " + target;
+			return String.format("if (%s >= %s) then %s", vA, vB, target);
 		case 0x36:
-			return "if(" + vA + " > " + vB + ") then " + target;
+			return String.format("if (%s > %s) then %s", vA, vB, target);
 		case 0x37:
-			return "if(" + vA + " <= " + vB + ") then " + target;
+			return String.format("if (%s <= %s) then %s", vA, vB, target);
 		default:
 			return null;
 		}

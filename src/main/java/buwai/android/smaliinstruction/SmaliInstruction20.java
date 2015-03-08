@@ -31,19 +31,19 @@ public class SmaliInstruction20 {
 		
 		switch (id) {
 		case 0x44:
-			return vA + " = " + vB + "[" + vC + "];";
+			return String.format("%s = %s[%s];", vA, vB, vC);
 		case 0x45:
-			return vA + " = (wide)(" + vB + "[" + vC + "]);";
+			return String.format("%s,%s+1 = (wide)(%s[%s]);", vA, vA, vB, vC);
 		case 0x46:
-			return vA + " = (object)(" + vB + "[" + vC + "]);";
+			return String.format("%s = (Object)(%s[%s]);", vA, vB, vC);
 		case 0x47:
-			return vA + " = (boolean)(" + vB + "[" + vC + "]);";
+			return String.format("%s = (boolean)(%s[%s]);", vA, vB, vC);
 		case 0x48:
-			return vA + " = (byte)(" + vB + "[" + vC + "]);";
+			return String.format("%s = (byte)(%s[%s]);", vA, vB, vC);
 		case 0x49:
-			return vA + " = (char)(" + vB + "[" + vC + "]);";
+			return String.format("%s = (char)(%s[%s]);", vA, vB, vC);
 		case 0x4a:
-			return vA + " = (short)(" + vB + "[" + vC + "]);";
+			return String.format("%s = (short)(%s[%s]);", vA, vB, vC);
 		default:
 			return null;
 		}

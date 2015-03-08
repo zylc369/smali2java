@@ -20,7 +20,7 @@ public class SmaliInstruction27 {
 		beginIndex = smaliInst.indexOf(' ');
 		endIndex = smaliInst.indexOf(',');
 		String vA = smaliInst.substring(beginIndex, endIndex).trim();
-		String vB = smaliInst.substring(endIndex + 1);
+		String vB = smaliInst.substring(endIndex + 1).trim();
 		switch (id) {
 		case 0x7b:
 			return String.format("%s = -((int)%s);", vA, vB);

@@ -30,16 +30,15 @@ public class SmaliInstruction01 {
 		case 0x1:
 		case 0x2:
 		case 0x3:
-			return vA + " = " + vB + ";";
+			return String.format("%s = %s;", vA, vB);
 		case 0x4:
 		case 0x5:
 		case 0x6:
-			return String.format("%s, %s(%s+1) = %s, %s(%s+1)", vA, vA.substring(0, 1), vA.substring(1), vB,
-					vB.substring(0, 1), vB.substring(1));
+			return String.format("%s,%s+1 = %s,%s+1;", vA, vA, vB, vB);
 		case 0x7:
 		case 0x8:
 		case 0x9:
-			return "Object " + vA + " = " + vB + ";";
+			return String.format("Object %s = %s;", vA, vB);
 		default:
 			return null;
 		}
