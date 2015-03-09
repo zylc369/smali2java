@@ -58,9 +58,10 @@ public class Smali2JavaFile {
 			writer = new BufferedWriter(new FileWriter(out));
 
 			String line;
-			//List<String> lines = new ArrayList<String>();
+			//List<String> keeps = new ArrayList<String>();
 			while ((line = reader.readLine()) != null) {
-				writer.write(smali2Java(line));
+				String newLine = smali2Java(line);
+				writer.write(newLine);
 				writer.newLine();
 			}
 		} catch (FileNotFoundException e) {
@@ -90,7 +91,7 @@ public class Smali2JavaFile {
 		if (0 == line.length()) {
 			return line;
 		}
-		
+
 		String trimLine = line.trim();
 		int index;
 		if ((index = trimLine.indexOf(' ')) == -1) {
@@ -105,9 +106,9 @@ public class Smali2JavaFile {
 			if (null == smaliInst) {
 				return line;
 			}
-			
+
 			int id = smaliInst.id;
-			
+
 			String newLine = null;
 			switch (id) {
 			case 0x1:
@@ -264,7 +265,7 @@ public class Smali2JavaFile {
 			case 0x70:
 			case 0x71:
 			case 0x72:
-			
+
 			case 0x74:
 			case 0x75:
 			case 0x76:
